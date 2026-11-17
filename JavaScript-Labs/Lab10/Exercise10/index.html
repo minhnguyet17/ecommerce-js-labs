@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercise 10.10 — jqXHR Handling</title>
+    <link rel="stylesheet" href="../assets/css/consume.css">
+    <link rel="stylesheet" href="../../css/labbar.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/jquery-3.1.1.min.js"><\/script>');</script>
+    <script type="text/javascript" language="javascript" src="../assets/js/service-url.js"></script>
+    <script type="text/javascript" language="javascript" src="js/lab10-walkthrough10.js"></script>
+</head>
+<body>
+<nav class="labbar">
+   <a href="../">&larr; Lab 10</a>
+   <b>Exercise 10.10 — jqXHR Handling</b>
+   <a class="labbar-right" href="../../">Trang chủ</a>
+</nav>
+
+<button id="consume">Consume</button>
+<!-- Nút bổ sung: gọi một URL không tồn tại để minh hoạ nhánh .fail() của jqXHR -->
+<button id="consumeFail">Consume (broken URL)</button>
+<div id="results">
+    <ul></ul>
+</div>
+<div class="animLoading"><img src="../assets/images/ajax-loader.gif" /></div>
+
+</body>
+</html>
