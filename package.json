@@ -1,0 +1,9 @@
+{
+  "name": "ecommerce-js-labs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JavaScript Labs (Lab 08, 09, 10) - Phát triển ứng dụng TMĐT",
+  "scripts": {
+    "start": "npx --yes http-server@14.1.1 . -p 5500 -c-1 -o /JavaScript-Labs/"
+  }
+}

@@ -1,0 +1,14 @@
+/* Thanh điều hướng nhỏ ở đầu mỗi trang Exercise.
+   Chỉ dùng thẻ <nav>, <a>, <b> để không ảnh hưởng tới các selector trong bài lab
+   (vd: Exercise 9.1 chọn mọi <span>, Exercise 10.2 chọn mọi <button>). */
+nav.labbar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem;
+  margin: 0 0 1rem 0; padding: .6rem 1rem;
+  background: #0f2a3d; color: #e8f1f7;
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  position: relative; z-index: 1000;
+}
+nav.labbar a { color: #9fd3ff; text-decoration: none; }
+nav.labbar a:hover { text-decoration: underline; }
+nav.labbar b { font-weight: 600; color: #fff; }
+nav.labbar .labbar-right { margin-left: auto; }
