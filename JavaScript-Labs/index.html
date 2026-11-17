@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Labs — Nguyễn Thị Minh Nguyệt</title>
+  <meta name="description" content="Portfolio kết quả thực hành JavaScript của Nguyễn Thị Minh Nguyệt: Lab 08 Language Foundations, Lab 09 DOM and Events, Lab 10 jQuery.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#">JavaScript <span>Labs</span></a>
+    <button class="nav-toggle" aria-label="Mở menu" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#profile">Thông tin</a></li>
+        <li><a href="#intro">Giới thiệu</a></li>
+        <li><a href="#labs">Bài Lab</a></li>
+        <li><a href="#journey">Hành trình</a></li>
+        <li><a href="#skills">Kiến thức</a></li>
+        <li><a href="#demo">Demo TMĐT</a></li>
+        <li><a href="#reflection">Tự đánh giá</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= 3.1 THÔNG TIN CÁ NHÂN ================= -->
+<section class="hero" id="profile">
+  <div class="container">
+    <!-- Ảnh đại diện: images/avatar.jpg (nếu chưa có file sẽ tự dùng avatar.svg) -->
+    <img class="avatar" src="images/avatar.jpg" alt="Ảnh đại diện Nguyễn Thị Minh Nguyệt"
+         onerror="this.onerror=null; this.src='images/avatar.svg';">
+    <div>
+      <h1>Nguyễn Thị Minh Nguyệt</h1>
+      <p class="tagline">Phát triển ứng dụng Thương mại điện tử — Chương 4: JavaScript</p>
+      <ul class="profile-list">
+        <li><strong>Mã số sinh viên:</strong> 87251020135</li>
+        <li><strong>Lớp học phần:</strong> 26C1INF50902701</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/minhnguyet17" target="_blank" rel="noopener" style="color:#fff">github.com/minhnguyet17</a></li>
+      </ul>
+      <ul class="hero-stats">
+        <li><b>3</b> bài Lab</li>
+        <li><b>29</b> Exercise</li>
+        <li><b>1</b> demo TMĐT</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-light" href="#labs">Xem các bài Lab</a>
+        <a class="btn btn-outline" href="#demo">Thử demo cửa hàng</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3.2 GIỚI THIỆU ================= -->
+<section id="intro">
+  <div class="container">
+    <h2 class="section-title">Giới thiệu</h2>
+    <p class="section-sub">Mục tiêu thực hiện 03 bài Lab và vai trò của JavaScript trong phát triển web</p>
+    <div class="card prose">
+      <p>
+        Trang này tổng hợp kết quả ba bài thực hành JavaScript của học phần Phát triển ứng dụng Thương mại điện tử.
+        Mục tiêu của tôi là đi từng bước: nắm chắc nền tảng ngôn ngữ ở <b>Lab 08</b>, hiểu cách JavaScript
+        “nói chuyện” với trang web thông qua DOM và sự kiện ở <b>Lab 09</b>, rồi dùng <b>jQuery</b> ở Lab 10 để viết
+        mã gọn hơn, tạo hiệu ứng và lấy dữ liệu từ máy chủ.
+      </p>
+      <p>
+        Nếu HTML là bộ khung và CSS là lớp áo của website, thì JavaScript là phần giúp website phản hồi người dùng:
+        kiểm tra dữ liệu ngay khi nhập, cập nhật giỏ hàng mà không cần tải lại trang, hay hiển thị sản phẩm mới
+        lấy từ máy chủ. Với một website thương mại điện tử, đó chính là những chi tiết quyết định trải nghiệm mua sắm
+        của khách hàng.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3.3 DANH SÁCH BÀI LAB ================= -->
+<section id="labs">
+  <div class="container">
+    <h2 class="section-title">Các bài thực hành</h2>
+    <p class="section-sub">29 Exercise được tổ chức theo từng Lab — bấm vào để xem kết quả chạy trực tiếp</p>
+    <div class="lab-grid">
+      <article class="card lab-card lab08">
+        <div class="lab-no">Lab 08</div>
+        <h3>JavaScript 1: Language Foundations</h3>
+        <p>Cú pháp, biến, kiểu dữ liệu, String / Date / Math, mảng, hàm, đối tượng và Browser Console.</p>
+        <div class="meta">11 Exercises · 8.1 – 8.11</div>
+        <a class="btn btn-primary" href="Lab08/">Mở Lab 08 &rarr;</a>
+      </article>
+      <article class="card lab-card lab09">
+        <div class="lab-no">Lab 09</div>
+        <h3>JavaScript 2: DOM and Events</h3>
+        <p>Truy xuất &amp; thay đổi DOM, tạo / xoá phần tử, sự kiện click / mouseover, debug và kiểm tra form.</p>
+        <div class="meta">8 Exercises · 9.1 – 9.8</div>
+        <a class="btn btn-primary" href="Lab09/">Mở Lab 09 &rarr;</a>
+      </article>
+      <article class="card lab-card lab10">
+        <div class="lab-no">Lab 10</div>
+        <h3>JavaScript 3: jQuery</h3>
+        <p>Selectors, sự kiện, chèn phần tử DOM, hiệu ứng &amp; animation, GET request và jqXHR.</p>
+        <div class="meta">10 Exercises · 10.1 – 10.10</div>
+        <a class="btn btn-primary" href="Lab10/">Mở Lab 10 &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HÀNH TRÌNH HỌC TẬP ================= -->
+<section id="journey">
+  <div class="container">
+    <h2 class="section-title">Hành trình thực hiện</h2>
+    <p class="section-sub">Mỗi bài Lab đều có một “nút thắt” — và đó cũng là lúc tôi học được nhiều nhất</p>
+    <ol class="timeline">
+      <li class="lab08">
+        <span class="tl-dot">08</span>
+        <div class="card">
+          <div class="tl-meta">Lab 08 · Language Foundations</div>
+          <h3>Làm quen với ngôn ngữ và Console</h3>
+          <p>Viết những script đầu tiên, rồi lần lượt làm việc với String, Date, Math, mảng, hàm và đối tượng — cuối cùng là bảng lịch tháng và danh sách quốc gia sinh ra hoàn toàn bằng code.</p>
+          <div class="tl-grid">
+            <div><b>Khó khăn</b>Khi gõ sai <code>document</code> thành <code>doccumment</code>, trang chỉ… trống trơn, không có thông báo lỗi nào.</div>
+            <div><b>Cách giải quyết</b>Tập thói quen mở DevTools → Console để đọc lỗi <code>ReferenceError</code> và kiểm tra giá trị biến trực tiếp.</div>
+          </div>
+        </div>
+      </li>
+      <li class="lab09">
+        <span class="tl-dot">09</span>
+        <div class="card">
+          <div class="tl-meta">Lab 09 · DOM and Events</div>
+          <h3>Cho trang web “phản hồi” người dùng</h3>
+          <p>Chọn và thay đổi phần tử, tạo/xoá node, gắn sự kiện click, mouseover, focus/blur và kiểm tra form đăng ký trước khi gửi.</p>
+          <div class="tl-grid">
+            <div><b>Khó khăn</b>Script đặt trong <code>&lt;head&gt;</code> báo lỗi <code>null</code> vì chạy trước khi các thẻ <code>div</code> được tạo ra.</div>
+            <div><b>Cách giải quyết</b>Chờ sự kiện <code>load</code> rồi mới truy xuất DOM; dùng breakpoint trong tab Sources để xem <code>e.target</code>.</div>
+          </div>
+        </div>
+      </li>
+      <li class="lab10">
+        <span class="tl-dot">10</span>
+        <div class="card">
+          <div class="tl-meta">Lab 10 · jQuery</div>
+          <h3>Viết gọn hơn và kết nối với máy chủ</h3>
+          <p>Dùng selector của jQuery, chuỗi sự kiện, chèn phần tử, các hiệu ứng fade/slide/animate và gửi GET request để lấy danh sách thành phố dạng JSON.</p>
+          <div class="tl-grid">
+            <div><b>Khó khăn</b>Web service của bài chỉ chạy qua HTTP, trong khi GitHub Pages dùng HTTPS nên trình duyệt chặn request (Mixed Content).</div>
+            <div><b>Cách giải quyết</b>Nạp jQuery qua <code>https</code> kèm file dự phòng; trên HTTPS thì đọc bản sao JSON của service đặt cùng domain.</div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="tl-dot">✓</span>
+        <div class="card">
+          <div class="tl-meta">Tổng hợp</div>
+          <h3>Portfolio &amp; triển khai GitHub Pages</h3>
+          <p>Tổ chức lại mã nguồn theo từng Lab/Exercise, xây dựng trang chủ này cùng một demo cửa hàng nhỏ áp dụng kiến thức cả ba bài, rồi triển khai lên GitHub Pages.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= 3.4 KIẾN THỨC & KỸ NĂNG ================= -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Kiến thức &amp; kỹ năng đã học</h2>
+    <p class="section-sub">Những gì tôi tiếp thu được qua từng bài Lab</p>
+    <div class="skill-grid">
+      <div class="card lab-card lab08">
+        <div class="lab-no">Lab 08</div>
+        <h3>Nền tảng JavaScript</h3>
+        <p>
+          Tôi biết cách đưa JavaScript vào trang theo nhiều cách (nhúng trực tiếp, file riêng, <code>&lt;noscript&gt;</code>
+          dự phòng) và luôn mở Console khi trang không chạy như mong đợi. Điều đáng nhớ nhất là sự khác nhau giữa
+          <code>==</code> và <code>===</code>, chuyện một biến “vô tình” thành toàn cục khi quên <code>var</code>,
+          và việc hàm trong JavaScript cũng là một đối tượng — có thể gán vào biến hay truyền làm tham số.
+          Mảng đối tượng giúp tôi hình dung cách lưu một danh sách sản phẩm.
+        </p>
+      </div>
+      <div class="card lab-card lab09">
+        <div class="lab-no">Lab 09</div>
+        <h3>DOM &amp; Events</h3>
+        <p>
+          Tôi học cách “tìm” một phần tử trên trang bằng id, class hoặc CSS selector, rồi đổi nội dung, thuộc tính,
+          style của nó hay tự tạo và xoá phần tử bằng code. Phần sự kiện cho tôi thấy trang web phản hồi người dùng
+          ra sao qua click, rê chuột, focus vào ô nhập. Tôi cũng rút ra bài học về thời điểm chạy script và cách
+          dùng breakpoint để gỡ lỗi. Kiểm tra form là phần gần với thực tế nhất.
+        </p>
+      </div>
+      <div class="card lab-card lab10">
+        <div class="lab-no">Lab 10</div>
+        <h3>jQuery</h3>
+        <p>
+          jQuery làm những việc ở Lab 09 ngắn gọn hơn nhiều: một lệnh <code>$()</code> chọn và xử lý cả nhóm phần tử,
+          các sự kiện nối tiếp nhau, và hiệu ứng fade / slide / animate chỉ cần một dòng. Giá trị nhất với tôi là
+          GET request: lấy dữ liệu JSON từ web service rồi hiển thị lên trang, đồng thời xử lý cả trường hợp lỗi
+          nhờ <code>done</code> / <code>fail</code> / <code>always</code> của jqXHR.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEMO TMĐT ================= -->
+<section id="demo">
+  <div class="container">
+    <h2 class="section-title">Ứng dụng vào website TMĐT</h2>
+    <p class="section-sub">Một cửa hàng tranh nhỏ chạy thật trên trang — mỗi chức năng đều dùng lại kỹ thuật từ các bài Lab</p>
+
+    <!-- Danh sách sản phẩm -->
+    <div class="card">
+      <div class="demo-head">
+        <h3>Sản phẩm</h3>
+        <span id="shop-loading" class="loading">Đang tải sản phẩm…</span>
+      </div>
+      <p id="shop-source" class="demo-note"></p>
+      <ul class="apply-tags">
+        <li class="lab08">Lab 08 · Constructor &amp; mảng đối tượng</li>
+        <li class="lab09">Lab 09 · createElement &amp; event delegation</li>
+        <li class="lab10">Lab 10 · $.getJSON + done / fail / always</li>
+      </ul>
+      <div id="shop-grid" class="shop-grid"></div>
+    </div>
+
+    <div class="demo-row">
+      <!-- Giỏ hàng -->
+      <div class="card" id="cart-card">
+        <div class="demo-head">
+          <h3>Giỏ hàng <span id="cart-count" class="cart-badge">0</span></h3>
+          <button type="button" id="cart-toggle" class="link-btn">Thu gọn</button>
+        </div>
+        <ul class="apply-tags">
+          <li class="lab08">Lab 08 · Hàm tính thuế VAT</li>
+          <li class="lab09">Lab 09 · Cập nhật DOM theo sự kiện</li>
+          <li class="lab10">Lab 10 · fade / slideToggle</li>
+        </ul>
+        <div id="cart-body">
+          <p id="cart-empty" class="cart-empty">Giỏ hàng đang trống — hãy thêm một bức tranh.</p>
+          <ul id="cart-items" class="cart-items"></ul>
+          <div id="cart-summary" class="cart-summary" style="display:none">
+            <div><span>Tạm tính</span><span id="cart-subtotal">0 ₫</span></div>
+            <div><span>VAT (10%)</span><span id="cart-tax">0 ₫</span></div>
+            <div class="total"><span>Tổng cộng</span><span id="cart-total">0 ₫</span></div>
+            <button type="button" id="checkout-btn" class="btn btn-primary">Tiến hành đặt hàng</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form đăng ký -->
+      <div class="card" id="register-card">
+        <h3 style="margin-top:0">Đăng ký tài khoản</h3>
+        <ul class="apply-tags">
+          <li class="lab09">Lab 09 · Form validation &amp; preventDefault</li>
+          <li class="lab09">Lab 09 · focus / blur</li>
+          <li class="lab10">Lab 10 · jQuery selectors</li>
+        </ul>
+        <form id="register-form" novalidate>
+          <div class="form-field">
+            <label for="reg-fullname">Họ và tên</label>
+            <input type="text" id="reg-fullname" name="fullname" placeholder="Nguyễn Văn A" autocomplete="name">
+            <span class="field-error"></span>
+          </div>
+          <div class="form-2col">
+            <div class="form-field">
+              <label for="reg-email">Email</label>
+              <input type="text" id="reg-email" name="email" placeholder="ten@gmail.com" autocomplete="email">
+              <span class="field-error"></span>
+            </div>
+            <div class="form-field">
+              <label for="reg-phone">Số điện thoại</label>
+              <input type="text" id="reg-phone" name="phone" placeholder="0901234567" autocomplete="tel">
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <div class="form-2col">
+            <div class="form-field">
+              <label for="reg-password">Mật khẩu</label>
+              <input type="password" id="reg-password" name="password" placeholder="Tối thiểu 8 ký tự" autocomplete="new-password">
+              <span class="field-error"></span>
+            </div>
+            <div class="form-field">
+              <label for="reg-confirm">Nhập lại mật khẩu</label>
+              <input type="password" id="reg-confirm" name="confirm" placeholder="Nhập lại mật khẩu" autocomplete="new-password">
+              <span class="field-error"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Đăng ký</button>
+          <div id="register-result" class="register-result" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3.5 TỰ ĐÁNH GIÁ (100–150 từ) ================= -->
+<section id="reflection">
+  <div class="container">
+    <h2 class="section-title">Tự đánh giá</h2>
+    <p class="section-sub">Tổng kết sau khi hoàn thành 03 bài Lab và liên hệ với website thương mại điện tử</p>
+    <div class="card prose">
+      <p id="reflection-text">
+        Sau ba bài Lab, tôi nắm được chuỗi kỹ thuật cốt lõi để làm một trang web có tương tác: tổ chức dữ liệu bằng
+        mảng và đối tượng, chọn và thay đổi phần tử DOM, bắt sự kiện người dùng, rồi dùng jQuery để viết gọn hơn và
+        lấy dữ liệu từ máy chủ. Lab 09 hữu ích nhất vì nó giải thích cách trang web phản hồi người dùng; Lab 10 khó
+        nhất ở phần GET request, nhất là khi web service chỉ chạy HTTP còn GitHub Pages dùng HTTPS. Với website
+        thương mại điện tử, tôi có thể áp dụng để kiểm tra form đăng ký, xây dựng giỏ hàng tự tính tiền, cập nhật
+        danh sách sản phẩm và tạo hiệu ứng khi khách thêm hàng. Tôi cần cải thiện thêm JavaScript hiện đại
+        (let/const, fetch, async/await) và kỹ năng gỡ lỗi.
+      </p>
+      <div id="reflection-count" class="word-count"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    &copy; <span id="year">2026</span> Nguyễn Thị Minh Nguyệt · MSSV 87251020135 — JavaScript Labs · Phát triển ứng dụng TMĐT
+  </div>
+</footer>
+
+<div id="shop-toast" class="shop-toast" role="status" aria-live="polite"></div>
+
+<!-- jQuery: CDN + bản dự phòng trong Lab 10 (giống Exercise 10.1) -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="Lab10/assets/js/jquery-3.1.1.min.js"><\/script>');</script>
+<script src="js/main.js"></script>
+<script src="js/shop-demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Ảnh đại diện tạm thời: thay bằng ảnh của bạn (vd: images/avatar.jpg) và sửa src trong index.html -->
+  <rect width="200" height="200" fill="#dbeaf0"/>
+  <circle cx="100" cy="78" r="38" fill="#0b6e8a"/>
+  <path d="M30 190c6-42 36-66 70-66s64 24 70 66z" fill="#0b6e8a"/>
+</svg>

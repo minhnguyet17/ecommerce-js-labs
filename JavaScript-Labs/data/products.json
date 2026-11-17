@@ -1,0 +1,7 @@
+[
+  { "id": "07020",  "name": "Tự do dẫn dắt nhân dân", "artist": "Eugène Delacroix", "price": 450000, "image": "images/shop/07020.jpg" },
+  { "id": "13030",  "name": "Mẹ của Whistler",          "artist": "James McNeill Whistler", "price": 390000, "image": "images/shop/13030.jpg" },
+  { "id": "05030",  "name": "Cái chết của Marat",       "artist": "Jacques-Louis David", "price": 350000, "image": "images/shop/05030.jpg" },
+  { "id": "06010",  "name": "Mademoiselle Rivière",     "artist": "Jean-Auguste-Dominique Ingres", "price": 320000, "image": "images/shop/06010.jpg" },
+  { "id": "120010", "name": "Eleonora xứ Toledo",       "artist": "Agnolo Bronzino", "price": 420000, "image": "images/shop/120010.jpg" }
+]
