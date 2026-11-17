@@ -26,8 +26,9 @@ $(function () {
             })
             // if error occurs will execute, but before always()
             .fail(function (xhr, status, error) {
+                // HTTP/2 (GitHub Pages) không gửi statusText -> dùng mã lỗi xhr.status thay thế
                 alert("failed loading data - status=" + status +
-                      " error=" + error);
+                      " error=" + (error || xhr.status));
             })
             // always should be last
             .always(function (data) {
