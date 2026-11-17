@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Exercise 8.1 — Enabling/Disabling JavaScript</title>
+   <link rel="stylesheet" href="../../css/labbar.css">
+   <link rel="stylesheet" href="../assets/css/lab08.css">
+   <style>
+      body { font-family: sans-serif; }
+      .status { font-weight: bold; font-size: 1.4em; padding: 1em; border-radius: 6px; max-width: 32em; }
+      .status.on  { background: #d4f5d4; color: #145214; }
+      .status.off { background: #ffd9d9; color: #8a1010; }
+      ol li { margin: .3em 0; }
+   </style>
+</head>
+<body>
+<nav class="labbar">
+   <a href="../">&larr; Lab 08</a>
+   <b>Exercise 8.1 — Enabling/Disabling JavaScript</b>
+   <a class="labbar-right" href="../../">Trang chủ</a>
+</nav>
+
+<header>
+   <h1>JavaScript Test</h1>
+</header>
+
+<!-- Nếu JavaScript đang BẬT: đoạn script này chạy và in ra thông báo -->
+<script type="text/javascript">
+   document.write('<p class="status on">You have JavaScript enabled</p>');
+</script>
+
+<!-- Nếu JavaScript đang TẮT: trình duyệt bỏ qua <script> và hiển thị nội dung <noscript> -->
+<noscript>
+   <p class="status off">You have JavaScript disabled</p>
+</noscript>
+
+<h2>How to turn JavaScript on/off (Chrome / Edge)</h2>
+<ol>
+   <li>Open <strong>Settings &rarr; Privacy and security &rarr; Site settings &rarr; JavaScript</strong>.</li>
+   <li>Choose <strong>Don't allow sites to use JavaScript</strong> (or add this site to the "not allowed" list).</li>
+   <li>Reload this page: the message changes to <strong>"You have JavaScript disabled"</strong>.</li>
+   <li>Quick alternative: open DevTools (F12) &rarr; <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> &rarr; type <strong>Disable JavaScript</strong> &rarr; reload.</li>
+</ol>
+
+<footer>
+   <p>Note: the original test page (examples.funwebdev.com/JavaScriptTest.php) is no longer online, so this page reproduces the same test.</p>
+</footer>
+</body>
+</html>
