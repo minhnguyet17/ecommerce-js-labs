@@ -1,0 +1,39 @@
+/* Exercise 7.2 - Relative Positioning */
+.stage {
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  padding: 12px 18px;
+}
+
+figure {
+  width: 260px;
+  margin: 10px 0;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 4px;
+}
+
+/* khung nét đứt đánh dấu vị trí ban đầu của ảnh */
+.ghost {
+  width: 260px;
+  outline: 2px dashed #f97316;
+}
+
+.moved {
+  position: relative;
+  top: -40px;
+  left: 160px;
+  margin: 0;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.1 - Document Flow</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise01.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.1 — Document Flow</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <p class="note">Viền xanh dương = phần tử <strong>block</strong>, viền cam = phần tử <strong>inline</strong>.
+      Mỗi khối bên dưới dùng cùng một đoạn HTML nhưng thay đổi thuộc tính <code>display</code>.</p>
+
+    <h2>1. Mặc định (normal flow)</h2>
+    <div class="demo">
+      <p>Đoạn văn là phần tử <strong>block</strong>: luôn bắt đầu trên dòng mới và chiếm hết chiều ngang.
+        Bên trong có các phần tử <span class="tag">inline</span> như <a href="#">liên kết</a>,
+        <em>chữ nghiêng</em> và ảnh <img src="../images/halong.jpg" alt="Hạ Long" class="thumb">
+        nằm cùng dòng với chữ.</p>
+      <p>Đoạn văn thứ hai tự động xuống dòng vì là block.</p>
+    </div>
+
+    <h2>2. <code>display: block</code> cho phần tử inline</h2>
+    <div class="demo to-block">
+      <p>Các phần tử <span class="tag">span</span>, <a href="#">liên kết</a> và ảnh
+        <img src="../images/halong.jpg" alt="Hạ Long" class="thumb"> bây giờ được tách ra thành từng dòng riêng.</p>
+    </div>
+
+    <h2>3. <code>display: inline</code> cho phần tử block (menu ngang)</h2>
+    <div class="demo">
+      <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Điểm đến</a></li>
+        <li><a href="#">Ẩm thực</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+
+    <h2>4. <code>display: inline-block</code> – vừa nằm cùng dòng, vừa đặt được width/height</h2>
+    <div class="demo">
+      <div class="card">Hạ Long</div>
+      <div class="card">Hội An</div>
+      <div class="card">Đà Lạt</div>
+      <div class="card">Sa Pa</div>
+    </div>
+
+    <h2>5. <code>display: none</code> so với <code>visibility: hidden</code></h2>
+    <div class="demo">
+      <div class="box">Hộp 1</div>
+      <div class="box hidden-none">Hộp 2 (display: none)</div>
+      <div class="box">Hộp 3</div>
+    </div>
+    <div class="demo">
+      <div class="box">Hộp 1</div>
+      <div class="box hidden-visibility">Hộp 2 (visibility: hidden)</div>
+      <div class="box">Hộp 3</div>
+    </div>
+    <p class="note">Với <code>display: none</code> phần tử bị loại khỏi document flow (Hộp 3 dồn lên);
+      với <code>visibility: hidden</code> phần tử bị ẩn nhưng vẫn giữ chỗ trống.</p>
+  </main>
+</body>
+</html>

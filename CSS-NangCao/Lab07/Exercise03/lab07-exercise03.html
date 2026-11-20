@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.3 - Absolute Positioning</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise03.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.3 — Absolute Positioning</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <p class="note">Phần tử <code>position: absolute</code> bị đưa ra khỏi document flow và được đặt theo
+      <strong>ancestor gần nhất có position khác static</strong>.</p>
+
+    <h2>1. Ancestor gần nhất có position là khung ngoài</h2>
+    <div class="outer">
+      <span class="label">.outer (position: relative)</span>
+      <div class="inner">
+        <span class="label">.inner (position: static)</span>
+        <p>Hộp "Giảm 30%" nằm trong .inner nhưng vì .inner không có position nên nó được đặt
+          ở góc trên bên phải của <strong>.outer</strong>.</p>
+        <div class="badge">Giảm 30%</div>
+      </div>
+    </div>
+
+    <h2>2. Ancestor gần nhất có position là khung trong</h2>
+    <div class="outer">
+      <span class="label">.outer (position: relative)</span>
+      <div class="inner positioned">
+        <span class="label">.inner (position: relative)</span>
+        <p>Thêm <code>position: relative</code> cho .inner, hộp "Giảm 30%" chuyển vào góc của <strong>.inner</strong>.</p>
+        <div class="badge">Giảm 30%</div>
+      </div>
+    </div>
+
+    <h2>3. Chú thích đặt tuyệt đối trên ảnh</h2>
+    <figure class="photo">
+      <img src="../images/hoian.jpg" alt="Hội An">
+      <figcaption>Phố cổ Hội An về đêm</figcaption>
+    </figure>
+  </main>
+</body>
+</html>

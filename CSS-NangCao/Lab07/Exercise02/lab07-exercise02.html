@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.2 - Relative Positioning</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise02.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.2 — Relative Positioning</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <h2>1. Ảnh ở vị trí mặc định (position: static)</h2>
+    <div class="stage">
+      <p>Đây là đoạn văn đứng trước ảnh. Vịnh Hạ Long là di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi.</p>
+      <figure>
+        <img src="../images/halong.jpg" alt="Vịnh Hạ Long">
+        <figcaption>Vịnh Hạ Long</figcaption>
+      </figure>
+      <p>Đoạn văn đứng sau ảnh nằm ngay dưới ảnh theo document flow.</p>
+    </div>
+
+    <h2>2. Ảnh được dời bằng <code>position: relative; top: -40px; left: 160px;</code></h2>
+    <div class="stage">
+      <p>Đây là đoạn văn đứng trước ảnh. Vịnh Hạ Long là di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi.</p>
+      <div class="ghost">
+        <figure class="moved">
+          <img src="../images/halong.jpg" alt="Vịnh Hạ Long">
+          <figcaption>Vịnh Hạ Long (đã dời)</figcaption>
+        </figure>
+      </div>
+      <p>Đoạn văn đứng sau ảnh <strong>không bị dồn lên</strong>: khoảng trống ban đầu của ảnh (khung nét đứt)
+        vẫn được giữ lại trong document flow.</p>
+    </div>
+    <p class="note">Relative positioning dịch chuyển phần tử so với vị trí gốc của chính nó. Phần tử vẫn chiếm chỗ cũ,
+      nên có thể chồng lên nội dung xung quanh.</p>
+  </main>
+</body>
+</html>

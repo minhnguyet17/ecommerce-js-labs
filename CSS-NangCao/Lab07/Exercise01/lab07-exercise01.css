@@ -1,0 +1,92 @@
+/* Exercise 7.1 - Document Flow */
+.demo {
+  background: #fff;
+  border: 1px dashed #94a3b8;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* tô viền để thấy rõ hộp block/inline */
+.demo p,
+.demo div,
+.demo ul,
+.demo li {
+  outline: 2px solid #3b82f6;
+}
+
+.demo span,
+.demo a,
+.demo em,
+.demo img {
+  outline: 2px solid #f97316;
+}
+
+.tag {
+  background: #fde68a;
+  padding: 0 4px;
+}
+
+.thumb {
+  width: 70px;
+  height: 46px;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/* 2. chuyển phần tử inline thành block */
+.to-block span,
+.to-block a,
+.to-block img {
+  display: block;
+  margin: 6px 0;
+}
+
+/* 3. chuyển li (block) thành inline để làm menu ngang */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  background: #1e3a8a;
+}
+
+.menu li {
+  display: inline;
+  margin-right: 16px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 4. inline-block */
+.card {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  margin: 4px;
+  padding-top: 26px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  border-radius: 8px;
+}
+
+/* 5. none vs hidden */
+.box {
+  display: inline-block;
+  width: 200px;
+  padding: 12px;
+  margin: 4px;
+  background: #dcfce7;
+  text-align: center;
+}
+
+.hidden-none {
+  display: none;
+}
+
+.hidden-visibility {
+  visibility: hidden;
+}
