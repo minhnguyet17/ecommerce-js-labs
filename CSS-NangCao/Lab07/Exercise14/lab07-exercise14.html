@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.14 - Transforms</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise14.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.14 — Transforms</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <p class="note">Khung nét đứt là vị trí ban đầu của ảnh. <code>transform</code> không làm thay đổi document flow –
+      các phần tử xung quanh vẫn giữ nguyên vị trí.</p>
+
+    <section class="grid">
+      <div class="cell">
+        <div class="frame"><img src="../images/hoian.jpg" alt="" class="t-none"></div>
+        <p><code>transform: none</code></p>
+      </div>
+      <div class="cell">
+        <div class="frame"><img src="../images/hoian.jpg" alt="" class="t-rotate"></div>
+        <p><code>rotate(-12deg)</code></p>
+      </div>
+      <div class="cell">
+        <div class="frame"><img src="../images/hoian.jpg" alt="" class="t-skew"></div>
+        <p><code>skew(15deg, 5deg)</code></p>
+      </div>
+      <div class="cell">
+        <div class="frame"><img src="../images/hoian.jpg" alt="" class="t-translate"></div>
+        <p><code>translate(30px, 20px)</code></p>
+      </div>
+      <div class="cell">
+        <div class="frame"><img src="../images/hoian.jpg" alt="" class="t-scale"></div>
+        <p><code>scale(0.7)</code></p>
+      </div>
+      <div class="cell">
+        <div class="frame"><img src="../images/hoian.jpg" alt="" class="t-combo"></div>
+        <p><code>rotate(8deg) scale(1.1) translateX(-10px)</code></p>
+      </div>
+    </section>
+
+    <h2>Transform khi rê chuột (hover)</h2>
+    <section class="hover-row">
+      <figure class="polaroid r1"><img src="../images/halong.jpg" alt=""><figcaption>Hạ Long</figcaption></figure>
+      <figure class="polaroid r2"><img src="../images/sapa.jpg" alt=""><figcaption>Sa Pa</figcaption></figure>
+      <figure class="polaroid r3"><img src="../images/phuquoc.jpg" alt=""><figcaption>Phú Quốc</figcaption></figure>
+    </section>
+  </main>
+</body>
+</html>

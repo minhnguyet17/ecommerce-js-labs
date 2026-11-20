@@ -1,0 +1,108 @@
+/* Exercise 7.16 - More Transitions */
+.cards {
+  overflow: auto;
+  padding: 10px 0 20px;
+}
+
+.card {
+  position: relative;
+  float: left;
+  width: 31%;
+  margin: 0 1.1%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.card figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 16px;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p,
+.card a {
+  margin: 2px 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 14px;
+  color: #111;
+  background: #fde047;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* trạng thái hover */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card:hover img {
+  transform: scale(1.12);
+  filter: brightness(0.8) saturate(1.4);
+}
+
+.card:hover p,
+.card:hover a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* xuất hiện lần lượt nhờ transition-delay */
+.card:hover .line1 { transition-delay: 0.1s; }
+.card:hover .line2 { transition-delay: 0.25s; }
+.card:hover .line3 { transition-delay: 0.4s; }
+
+/* menu gạch chân trượt */
+.slide-menu a {
+  position: relative;
+  display: inline-block;
+  margin-right: 28px;
+  padding: 6px 0;
+  color: #1e293b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.slide-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: #db2777;
+  transition: width 0.35s ease-out;
+}
+
+.slide-menu a:hover {
+  color: #db2777;
+}
+
+.slide-menu a:hover::after {
+  width: 100%;
+}

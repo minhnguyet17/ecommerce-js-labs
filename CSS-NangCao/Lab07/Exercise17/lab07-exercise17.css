@@ -1,0 +1,43 @@
+/* Exercise 7.17 - Filters */
+.filters {
+  overflow: auto;
+}
+
+.filters figure {
+  float: left;
+  width: 25%;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.filters img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  transition: filter 0.5s;
+}
+
+.filters figcaption {
+  margin-top: 6px;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  color: #4338ca;
+}
+
+.f-saturate   { filter: saturate(250%); }
+.f-grayscale  { filter: grayscale(100%); }
+.f-contrast   { filter: contrast(180%); }
+.f-brightness { filter: brightness(150%); }
+.f-blur       { filter: blur(3px); }
+.f-invert     { filter: invert(100%); }
+.f-sepia      { filter: sepia(100%); }
+.f-hue        { filter: hue-rotate(120deg); }
+.f-opacity    { filter: opacity(40%); }
+.f-shadow     { filter: drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.6)); }
+.f-combo      { filter: sepia(60%) contrast(130%) brightness(110%); }
+
+/* rê chuột để xem ảnh gốc */
+.filters img:hover {
+  filter: none;
+}

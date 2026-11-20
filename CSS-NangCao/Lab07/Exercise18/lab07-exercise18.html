@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.18 - Animations</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise18.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.18 — Animations</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <h2>1. Banner trượt vào (animation-duration + animation-fill-mode)</h2>
+    <div class="banner">
+      <img src="../images/halong.jpg" alt="">
+      <h3 class="slide-in">Ưu đãi mùa hè – Giảm 30% tour Hạ Long</h3>
+      <a href="#" class="slide-in delay">Xem ngay</a>
+    </div>
+
+    <h2>2. animation-iteration-count và animation-delay</h2>
+    <div class="row">
+      <div class="demo">
+        <div class="ball once"></div>
+        <code>iteration-count: 1</code>
+      </div>
+      <div class="demo">
+        <div class="ball three"></div>
+        <code>iteration-count: 3</code>
+      </div>
+      <div class="demo">
+        <div class="ball infinite"></div>
+        <code>iteration-count: infinite</code>
+      </div>
+      <div class="demo">
+        <div class="ball delayed"></div>
+        <code>animation-delay: 2s</code>
+      </div>
+    </div>
+
+    <h2>3. Cú pháp rút gọn (shorthand) <code>animation</code></h2>
+    <div class="row">
+      <div class="demo">
+        <div class="pulse">HOT</div>
+        <code>pulse 1.2s ease-in-out infinite</code>
+      </div>
+      <div class="demo">
+        <div class="spinner"></div>
+        <code>spin 1s linear infinite</code>
+      </div>
+      <div class="demo">
+        <div class="plane">✈</div>
+        <code>fly 4s ease-in-out infinite alternate</code>
+      </div>
+      <div class="demo">
+        <div class="color-box"></div>
+        <code>rainbow 6s linear infinite</code>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
