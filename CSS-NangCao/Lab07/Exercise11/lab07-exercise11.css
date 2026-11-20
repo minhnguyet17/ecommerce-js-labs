@@ -1,0 +1,82 @@
+/* Exercise 7.11 - Three-Column Layout (positioning) */
+.page {
+  max-width: 1150px;
+  margin: 20px auto;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.site-header {
+  background: #9a3412;
+  color: #fff;
+  padding: 16px 24px;
+}
+
+.site-header h2 {
+  margin: 0;
+}
+
+.columns {
+  position: relative;   /* mốc cho 2 cột absolute */
+  min-height: 560px;    /* cột absolute không làm khung cao lên nên cần chiều cao tối thiểu */
+}
+
+.left,
+.right {
+  position: absolute;
+  top: 0;
+  width: 210px;
+  padding: 12px 16px;
+  height: 100%;
+}
+
+.left {
+  left: 0;
+  background: #ffedd5;
+}
+
+.right {
+  right: 0;
+  background: #fef3c7;
+}
+
+.left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left a {
+  display: block;
+  padding: 6px 0;
+  color: #9a3412;
+  text-decoration: none;
+  border-bottom: 1px solid #fed7aa;
+}
+
+.right img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.right p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.center {
+  margin: 0 230px;
+  padding: 12px 0;
+}
+
+.center img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.site-footer {
+  background: #431407;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}

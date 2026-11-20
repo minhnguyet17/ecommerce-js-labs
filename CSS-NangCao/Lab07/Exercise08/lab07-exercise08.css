@@ -1,0 +1,85 @@
+/* Exercise 7.8 - Floating and Clearing */
+.gallery figure {
+  float: left;
+  width: 300px;
+  margin: 0 16px 16px 0;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+}
+
+.gallery figcaption {
+  font-size: 14px;
+  text-align: center;
+}
+
+.text {
+  background: #fee2e2;
+  padding: 6px 10px;
+}
+
+.cleared {
+  clear: both;
+}
+
+/* phần tử thứ 1, 4, 7... bắt đầu hàng mới */
+.rows figure:nth-child(3n + 1) {
+  clear: left;
+}
+
+.clear-both {
+  clear: both;
+  background: #dcfce7;
+}
+
+/* bảng so sánh */
+.compare {
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.f-left,
+.f-right {
+  width: 200px;
+  height: 60px;
+  padding: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.f-left {
+  float: left;
+  background: #2563eb;
+}
+
+.f-right {
+  float: right;
+  background: #db2777;
+}
+
+.f-right.tall {
+  height: 110px;
+}
+
+.c-left,
+.c-both {
+  background: #fef3c7;
+  padding: 6px;
+  margin: 4px 0 0;
+}
+
+.c-left {
+  clear: left;
+}
+
+.c-both {
+  clear: both;
+}

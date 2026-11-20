@@ -1,0 +1,51 @@
+/* Exercise 7.6 - Floating in a Container */
+.container {
+  background: #f5f3ff;
+  border: 3px solid #7c3aed;
+  padding: 10px;
+}
+
+.thumb {
+  float: left;
+  width: 220px;
+  margin: 0 16px 0 0;
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thumb.right {
+  float: right;
+  margin: 0 0 0 16px;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+}
+
+.thumb figcaption {
+  text-align: center;
+  font-size: 14px;
+}
+
+.intro {
+  margin: 0;
+}
+
+.after {
+  background: #fef9c3;
+  padding: 6px 10px;
+}
+
+/* cách 1 */
+.fixed-overflow {
+  overflow: auto;
+}
+
+/* cách 2 */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

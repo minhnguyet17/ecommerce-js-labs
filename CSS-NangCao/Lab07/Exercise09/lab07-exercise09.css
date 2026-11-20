@@ -1,0 +1,51 @@
+/* Exercise 7.9 - Using Positioning */
+.gallery {
+  overflow: auto;
+  padding-top: 20px;
+}
+
+.gallery figure {
+  position: relative;   /* mốc cho các phần tử absolute bên trong */
+  float: left;
+  width: 320px;
+  margin: 0 20px 20px 0;
+  border-radius: 10px;
+  overflow: visible;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery figure > img:first-child {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* chú thích chồng lên phần dưới ảnh */
+.gallery figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px 14px;
+  color: #fff;
+  background: rgba(15, 23, 42, 0.65);
+  border-radius: 0 0 10px 10px;
+}
+
+.gallery figcaption h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.gallery figcaption p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* huy hiệu nằm lệch ra ngoài góc trên phải */
+.overlay {
+  position: absolute;
+  top: -22px;
+  right: -18px;
+  width: 70px;
+}

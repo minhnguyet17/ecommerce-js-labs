@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.6 - Floating in a Container</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise06.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.6 — Floating in a Container</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <h2>1. Container bị "co lại" khi chỉ chứa phần tử float</h2>
+    <div class="container">
+      <figure class="thumb"><img src="../images/sapa.jpg" alt=""><figcaption>Sa Pa</figcaption></figure>
+      <p class="intro">Ảnh float nằm trong container viền tím, nhưng chiều cao container chỉ bằng đoạn văn ngắn này.</p>
+    </div>
+    <p class="after">Đoạn văn phía sau container bị ảnh float tràn xuống và chảy quanh ảnh.</p>
+
+    <h2>2. Sửa bằng <code>overflow: auto</code> (tạo block formatting context)</h2>
+    <div class="container fixed-overflow">
+      <figure class="thumb"><img src="../images/sapa.jpg" alt=""><figcaption>Sa Pa</figcaption></figure>
+      <p class="intro">Container đã bao trọn ảnh float.</p>
+    </div>
+    <p class="after">Đoạn văn phía sau nằm đúng vị trí bên dưới container.</p>
+
+    <h2>3. Sửa bằng kỹ thuật clearfix (<code>::after</code> + <code>clear: both</code>)</h2>
+    <div class="container clearfix">
+      <figure class="thumb right"><img src="../images/ninhbinh.jpg" alt=""><figcaption>Tràng An</figcaption></figure>
+      <p class="intro">Ảnh float phải, container dùng lớp <code>.clearfix</code>.</p>
+    </div>
+    <p class="after">Đoạn văn phía sau cũng không bị ảnh hưởng.</p>
+  </main>
+</body>
+</html>

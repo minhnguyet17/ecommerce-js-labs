@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.5 - Floating Elements</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise05.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.5 — Floating Elements</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <article class="post">
+      <h2>Một ngày ở Đà Lạt</h2>
+      <figure class="float-left">
+        <img src="../images/dalat.jpg" alt="Đà Lạt">
+        <figcaption>float: left</figcaption>
+      </figure>
+      <p>Đà Lạt nằm trên cao nguyên Lâm Viên ở độ cao khoảng 1.500 mét, khí hậu mát mẻ quanh năm.
+        Buổi sáng, sương mù phủ kín những rừng thông và mặt hồ Xuân Hương, tạo nên khung cảnh rất riêng mà
+        khó nơi nào có được. Du khách thường dậy sớm để săn mây ở đồi chè Cầu Đất hoặc dạo quanh chợ Đà Lạt
+        thưởng thức sữa đậu nành nóng và bánh căn.</p>
+      <p>Phần tử được <code>float: left</code> bị đưa sang trái, và nội dung văn bản phía sau sẽ chảy bao quanh
+        bên phải của ảnh. Khoảng cách giữa ảnh và chữ được tạo bằng <code>margin-right</code>.
+        Khi đoạn văn dài hơn chiều cao của ảnh, chữ sẽ tràn xuống bên dưới ảnh như bình thường.</p>
+
+      <h2>Hoàng hôn Mũi Né</h2>
+      <figure class="float-right">
+        <img src="../images/muine.jpg" alt="Mũi Né">
+        <figcaption>float: right</figcaption>
+      </figure>
+      <p>Mũi Né nổi tiếng với những đồi cát vàng và đỏ thay đổi hình dạng theo gió. Chiều xuống, cả vùng biển được
+        nhuộm màu cam rực rỡ. Ảnh phía bên phải được đặt <code>float: right</code> nên chữ sẽ bao quanh bên trái.</p>
+      <p>Float ban đầu được tạo ra để chữ chảy quanh hình ảnh giống như trong báo in, sau này mới được dùng để dựng
+        bố cục nhiều cột. Đây là kỹ thuật nền tảng giúp hiểu các bài tiếp theo của Lab 07.</p>
+    </article>
+  </main>
+</body>
+</html>

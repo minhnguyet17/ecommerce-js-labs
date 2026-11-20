@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.10 - Two-Column Layout</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise10.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.10 — Two-Column Layout</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <div class="page">
+    <header class="site-header">
+      <h2>Việt Nam Travel Blog</h2>
+    </header>
+
+    <nav class="sidebar">
+      <h3>Điểm đến</h3>
+      <ul>
+        <li><a href="#">Miền Bắc</a></li>
+        <li><a href="#">Miền Trung</a></li>
+        <li><a href="#">Miền Nam</a></li>
+        <li><a href="#">Biển đảo</a></li>
+        <li><a href="#">Ẩm thực</a></li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <h3>Hành trình Sa Pa 3 ngày 2 đêm</h3>
+      <img src="../images/sapa.jpg" alt="Sa Pa">
+      <p>Cột trái (<code>nav.sidebar</code>) dùng <code>float: left</code> với chiều rộng cố định 220px.
+        Cột phải (<code>main</code>) không float mà dùng <code>margin-left: 250px</code> để chừa chỗ cho cột trái,
+        nhờ vậy cột nội dung tự co giãn theo chiều rộng cửa sổ.</p>
+      <p>Sa Pa vào mùa lúa chín (tháng 9) là thời điểm đẹp nhất trong năm. Những thửa ruộng bậc thang vàng óng
+        trải dài khắp thung lũng Mường Hoa, xen giữa là các bản làng của người H'Mông và Dao đỏ.</p>
+    </main>
+
+    <footer class="site-footer">Footer dùng <code>clear: both</code> – © Lab 07 CSS nâng cao</footer>
+  </div>
+</body>
+</html>

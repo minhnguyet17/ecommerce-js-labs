@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.8 - Floating and Clearing</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise08.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.8 — Floating and Clearing</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <main class="lab-content">
+    <h2>1. Không dùng clear: các thẻ cao thấp khác nhau làm hàng sau bị "mắc kẹt"</h2>
+    <section class="gallery">
+      <figure><img src="../images/halong.jpg" alt=""><figcaption>Hạ Long – di sản thiên nhiên thế giới, nổi tiếng với hàng nghìn đảo đá vôi</figcaption></figure>
+      <figure><img src="../images/hoian.jpg" alt=""><figcaption>Hội An</figcaption></figure>
+      <figure><img src="../images/dalat.jpg" alt=""><figcaption>Đà Lạt</figcaption></figure>
+      <figure><img src="../images/sapa.jpg" alt=""><figcaption>Sa Pa</figcaption></figure>
+      <figure><img src="../images/hue.jpg" alt=""><figcaption>Huế</figcaption></figure>
+      <figure><img src="../images/phuquoc.jpg" alt=""><figcaption>Phú Quốc</figcaption></figure>
+    </section>
+    <p class="text">Đoạn văn này không có clear nên bị chen vào giữa các ảnh float.</p>
+
+    <h2 class="cleared">2. Dùng <code>clear: left</code> cho phần tử đầu mỗi hàng (mỗi hàng 3 ảnh)</h2>
+    <section class="gallery rows">
+      <figure><img src="../images/halong.jpg" alt=""><figcaption>Hạ Long – di sản thiên nhiên thế giới, nổi tiếng với hàng nghìn đảo đá vôi</figcaption></figure>
+      <figure><img src="../images/hoian.jpg" alt=""><figcaption>Hội An</figcaption></figure>
+      <figure><img src="../images/dalat.jpg" alt=""><figcaption>Đà Lạt</figcaption></figure>
+      <figure><img src="../images/sapa.jpg" alt=""><figcaption>Sa Pa</figcaption></figure>
+      <figure><img src="../images/hue.jpg" alt=""><figcaption>Huế</figcaption></figure>
+      <figure><img src="../images/phuquoc.jpg" alt=""><figcaption>Phú Quốc</figcaption></figure>
+    </section>
+    <p class="text clear-both">Đoạn văn có <code>clear: both</code> nên luôn nằm dưới toàn bộ ảnh float.</p>
+
+    <h2>3. So sánh clear: left / right / both</h2>
+    <div class="compare">
+      <div class="f-left">float: left</div>
+      <div class="f-right">float: right</div>
+      <p class="c-left">clear: left – chỉ né phần tử float trái</p>
+    </div>
+    <div class="compare">
+      <div class="f-left">float: left</div>
+      <div class="f-right tall">float: right (cao hơn)</div>
+      <p class="c-left">clear: left – vẫn nằm cạnh phần tử float phải</p>
+    </div>
+    <div class="compare">
+      <div class="f-left">float: left</div>
+      <div class="f-right tall">float: right (cao hơn)</div>
+      <p class="c-both">clear: both – nằm dưới cả hai phần tử float</p>
+    </div>
+  </main>
+</body>
+</html>

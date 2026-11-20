@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.11 - Three-Column Layout</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <link rel="stylesheet" href="lab07-exercise11.css">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.11 — Three-Column Layout</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <div class="page">
+    <header class="site-header"><h2>Việt Nam Travel Blog</h2></header>
+
+    <div class="columns">
+      <nav class="left">
+        <h3>Danh mục</h3>
+        <ul>
+          <li><a href="#">Miền Bắc</a></li>
+          <li><a href="#">Miền Trung</a></li>
+          <li><a href="#">Miền Nam</a></li>
+          <li><a href="#">Biển đảo</a></li>
+        </ul>
+      </nav>
+
+      <main class="center">
+        <h3>Tràng An – "Hạ Long trên cạn"</h3>
+        <img src="../images/ninhbinh.jpg" alt="Tràng An">
+        <p>Bố cục ba cột được xây dựng bằng <strong>positioning</strong>: khung <code>.columns</code> có
+          <code>position: relative</code>; cột trái và cột phải dùng <code>position: absolute</code> lần lượt
+          bám vào <code>left: 0</code> và <code>right: 0</code>; cột giữa chừa chỗ hai bên bằng
+          <code>margin: 0 230px</code>.</p>
+        <p>Quần thể danh thắng Tràng An là di sản hỗn hợp văn hóa và thiên nhiên đầu tiên của Việt Nam. Du khách ngồi
+          thuyền nan đi qua hàng loạt hang động xuyên núi và các đền cổ.</p>
+      </main>
+
+      <aside class="right">
+        <h3>Bài viết nổi bật</h3>
+        <img src="../images/hue.jpg" alt="">
+        <p>Một ngày ở Cố đô Huế</p>
+        <img src="../images/muine.jpg" alt="">
+        <p>Săn bình minh ở Mũi Né</p>
+      </aside>
+    </div>
+
+    <footer class="site-footer">© Lab 07 – Three-Column Layout</footer>
+  </div>
+</body>
+</html>

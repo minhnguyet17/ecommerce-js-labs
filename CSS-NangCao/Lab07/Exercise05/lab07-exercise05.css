@@ -1,0 +1,40 @@
+/* Exercise 7.5 - Floating Elements */
+.post {
+  background: #fff;
+  padding: 10px 24px 24px;
+  border: 1px solid #e2e8f0;
+}
+
+figure {
+  width: 280px;
+  margin: 4px 0 10px;
+  padding: 6px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+}
+
+figure img {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+}
+
+.float-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.float-right {
+  float: right;
+  margin-left: 20px;
+}
+
+/* tiêu đề luôn bắt đầu dưới ảnh trước đó */
+.post h2 {
+  clear: both;
+}
