@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 07 — Advanced CSS: Layout</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="../">CSS <span>Nâng cao</span></a>
+    <nav class="lab-nav">
+      <ul>
+        <li><a href="../">Trang chủ</a></li>
+        <li><a href="./" class="active">Lab 07</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="lab-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="../">Trang chủ</a> / Lab 07</div>
+    <h1>Lab 07 — Advanced CSS: Layout</h1>
+    <p>Document flow, positioning, z-index, float &amp; clear, bố cục nhiều cột, responsive với media queries và viewport,
+      transforms, transitions, filters, animations và Bootstrap grid system.</p>
+  </div>
+</div>
+
+<main class="container">
+  <section class="ex-group g1">
+    <h2>7.1 – 7.4 · Document flow, positioning, z-index</h2>
+    <div class="ex-list">
+      <a class="card ex-item" href="Exercise01/">
+        <div class="ex-badge">7.1</div>
+        <div><h3>Exercise 7.1 — Document Flow</h3><p>Quan sát và thay đổi cách phần tử inline/block hiển thị bằng display.</p><span class="tag">block · inline · inline-block · none</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise02/">
+        <div class="ex-badge">7.2</div>
+        <div><h3>Exercise 7.2 — Relative Positioning</h3><p>Dịch chuyển ảnh so với vị trí gốc, khoảng trống cũ vẫn được giữ lại.</p><span class="tag">position: relative</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise03/">
+        <div class="ex-badge">7.3</div>
+        <div><h3>Exercise 7.3 — Absolute Positioning</h3><p>Định vị tuyệt đối theo ancestor gần nhất có position.</p><span class="tag">position: absolute</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise04/">
+        <div class="ex-badge">7.4</div>
+        <div><h3>Exercise 7.4 — Stacking Using Z-Index</h3><p>Đảo thứ tự chồng lớp và quan hệ stacking context cha/con.</p><span class="tag">z-index</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="ex-group g2">
+    <h2>7.5 – 7.9 · Float, clear và positioning</h2>
+    <div class="ex-list">
+      <a class="card ex-item" href="Exercise05/">
+        <div class="ex-badge">7.5</div>
+        <div><h3>Exercise 7.5 — Floating Elements</h3><p>Ảnh float trái/phải, văn bản chảy bao quanh.</p><span class="tag">float: left · right</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise06/">
+        <div class="ex-badge">7.6</div>
+        <div><h3>Exercise 7.6 — Floating in a Container</h3><p>Container bị co lại và hai cách khắc phục.</p><span class="tag">overflow · clearfix</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise07/">
+        <div class="ex-badge">7.7</div>
+        <div><h3>Exercise 7.7 — Floating Multiple Items</h3><p>Gallery 8 ảnh float, tự xuống dòng khi đổi kích thước cửa sổ.</p><span class="tag">gallery</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise08/">
+        <div class="ex-badge">7.8</div>
+        <div><h3>Exercise 7.8 — Floating and Clearing</h3><p>Dùng clear để bắt đầu hàng mới, so sánh left/right/both.</p><span class="tag">clear · :nth-child</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise09/">
+        <div class="ex-badge">7.9</div>
+        <div><h3>Exercise 7.9 — Using Positioning</h3><p>Chú thích và huy hiệu "MỚI" chồng lên ảnh.</p><span class="tag">relative + absolute</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="ex-group g3">
+    <h2>7.10 – 7.13 · Multi-column layout, responsive design, viewport</h2>
+    <div class="ex-list">
+      <a class="card ex-item" href="Exercise10/">
+        <div class="ex-badge">7.10</div>
+        <div><h3>Exercise 7.10 — Two-Column Layout</h3><p>Sidebar float trái, cột nội dung dùng margin.</p><span class="tag">float + margin</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise11/">
+        <div class="ex-badge">7.11</div>
+        <div><h3>Exercise 7.11 — Three-Column Layout</h3><p>Hai cột bên đặt absolute, cột giữa co giãn.</p><span class="tag">positioning</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise12/">
+        <div class="ex-badge">7.12</div>
+        <div><h3>Exercise 7.12 — Media Queries</h3><p>Stylesheet desktop/mobile riêng, đổi bố cục theo chiều rộng màn hình.</p><span class="tag">desktop.css · mobile.css</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise13/">
+        <div class="ex-badge">7.13</div>
+        <div><h3>Exercise 7.13 — Setting the Viewport</h3><p>Phát triển tiếp từ 7.12: thêm viewport, menu thành ô chọn trên mobile.</p><span class="tag">meta viewport · select</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="ex-group g4">
+    <h2>7.14 – 7.18 · Transforms, transitions, filters, animations</h2>
+    <div class="ex-list">
+      <a class="card ex-item" href="Exercise14/">
+        <div class="ex-badge">7.14</div>
+        <div><h3>Exercise 7.14 — Transforms</h3><p>rotate, skew, translate, scale và ảnh polaroid khi hover.</p><span class="tag">transform</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise15/">
+        <div class="ex-badge">7.15</div>
+        <div><h3>Exercise 7.15 — Transitions</h3><p>Chuyển đổi khi hover và so sánh các timing function.</p><span class="tag">transition · timing-function</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise16/">
+        <div class="ex-badge">7.16</div>
+        <div><h3>Exercise 7.16 — More Transitions</h3><p>Thẻ tour kết hợp nhiều transition và transition-delay.</p><span class="tag">transition-delay</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise17/">
+        <div class="ex-badge">7.17</div>
+        <div><h3>Exercise 7.17 — Filters</h3><p>11 bộ lọc ảnh, rê chuột để xem ảnh gốc.</p><span class="tag">filter</span></div>
+      </a>
+      <a class="card ex-item" href="Exercise18/">
+        <div class="ex-badge">7.18</div>
+        <div><h3>Exercise 7.18 — Animations</h3><p>@keyframes, duration, iteration-count, delay và shorthand.</p><span class="tag">@keyframes</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="ex-group g5">
+    <h2>7.19 · Bootstrap grid system</h2>
+    <div class="ex-list">
+      <a class="card ex-item" href="Exercise19/">
+        <div class="ex-badge">7.19</div>
+        <div><h3>Exercise 7.19 — Using Bootstrap</h3><p>Navbar, jumbotron, grid, nested columns, panel, list-group, button.</p><span class="tag">Bootstrap 3</span></div>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    &copy; 2026 Nguyễn Thị Minh Nguyệt · MSSV 87251020135 — CSS nâng cao (Lab 07) · Phát triển ứng dụng TMĐT
+  </div>
+</footer>
+
+</body>
+</html>

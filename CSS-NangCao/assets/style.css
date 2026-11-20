@@ -1,0 +1,224 @@
+/* =========================================================
+   CSS nâng cao — style trang chủ và trang danh sách Lab 07
+   Dùng chung theme với JavaScript-Labs (biến màu, font, card, hero...)
+   và bổ sung các kỹ thuật của Lab 07: position sticky/absolute, float-free
+   grid, transform, transition, animation, media queries.
+   ========================================================= */
+:root {
+  --c-bg: #f6f8fb;
+  --c-surface: #ffffff;
+  --c-text: #1d2733;
+  --c-muted: #5d6b7a;
+  --c-border: #e3e8ef;
+  --c-primary: #0b6e8a;       /* màu chủ đạo (giống JavaScript-Labs) */
+  --c-primary-dark: #08546a;
+  --c-accent: #f2994a;        /* màu nhấn */
+  --c-g1: #e9b52c;            /* 7.1 – 7.4 */
+  --c-g2: #2f9e6e;            /* 7.5 – 7.9 */
+  --c-g3: #3a6fd8;            /* 7.10 – 7.13 */
+  --c-g4: #c2508f;            /* 7.14 – 7.18 */
+  --c-g5: #7b5cd6;            /* 7.19 */
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(16, 38, 64, .08);
+  --maxw: 1100px;
+  --font: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--c-text);
+  background: var(--c-bg);
+}
+img { max-width: 100%; display: block; }
+a { color: var(--c-primary); }
+code { background: #e8f3f6; color: var(--c-primary-dark); padding: 1px 6px; border-radius: 4px; font-size: .9em; }
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 16px; }
+
+/* ---------- Header / navigation (position: sticky) ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--c-border);
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { font-weight: 700; text-decoration: none; color: var(--c-text); font-size: 1.05rem; }
+.brand span { color: var(--c-primary); }
+.site-nav ul, .lab-nav ul { list-style: none; display: flex; gap: 4px; margin: 0; padding: 0; }
+.site-nav a, .lab-nav a {
+  display: block; padding: 8px 12px; border-radius: 8px;
+  text-decoration: none; color: var(--c-muted); font-weight: 500;
+  transition: color .2s, background-color .2s;
+}
+.site-nav a:hover, .lab-nav a:hover, .lab-nav a.active { color: var(--c-primary); background: #e8f3f6; }
+
+/* nút menu trên điện thoại: checkbox hack, không cần JavaScript */
+.nav-check { position: absolute; opacity: 0; pointer-events: none; }
+.nav-toggle {
+  display: none; border: 1px solid var(--c-border); background: var(--c-surface);
+  border-radius: 8px; padding: 6px 10px; font-size: 1.1rem; cursor: pointer; line-height: 1.2;
+}
+
+/* ---------- Sections ---------- */
+section { padding: 64px 0; }
+section:nth-of-type(even) { background: var(--c-surface); }
+.section-title { font-size: 1.75rem; margin: 0 0 8px; }
+.section-sub { color: var(--c-muted); margin: 0 0 32px; }
+.card {
+  background: var(--c-surface); border: 1px solid var(--c-border);
+  border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px;
+}
+.prose p { margin: 0 0 12px; }
+.prose p:last-child { margin-bottom: 0; }
+
+/* ---------- Hero / profile ---------- */
+.hero {
+  position: relative; overflow: hidden;
+  padding: 72px 0 56px; color: #fff;
+  background: linear-gradient(135deg, #0b6e8a 0%, #12456b 100%);
+}
+/* hai vòng tròn trang trí: absolute + animation */
+.hero::before, .hero::after {
+  content: ""; position: absolute; border-radius: 50%;
+  background: rgba(255, 255, 255, .07);
+  animation: drift 10s ease-in-out infinite;
+}
+.hero::before { width: 360px; height: 360px; top: -140px; right: -90px; }
+.hero::after { width: 200px; height: 200px; bottom: -90px; left: 6%; animation-delay: -5s; }
+@keyframes drift {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(20px) scale(1.06); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero .container {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center;
+  animation: fadeUp .8s ease-out both;
+}
+.avatar {
+  width: 220px; height: 220px; border-radius: 50%; object-fit: cover; object-position: center 25%;
+  border: 6px solid rgba(255, 255, 255, .25); background: #fff;
+  transition: transform .5s;
+}
+.avatar:hover { transform: rotate(-4deg) scale(1.04); }
+.hero h1 { font-size: 2.4rem; margin: 0 0 4px; line-height: 1.2; }
+.hero .tagline { opacity: .85; margin: 0 0 20px; }
+.profile-list { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 6px; }
+.profile-list strong { display: inline-block; min-width: 130px; opacity: .8; font-weight: 500; }
+.profile-list a { color: #fff; }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 24px; padding: 0; list-style: none; }
+.hero-stats li { background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .22); border-radius: 999px; padding: 4px 14px; font-size: .9rem; }
+.hero-stats b { font-size: 1.05rem; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 999px; font-weight: 600;
+  text-decoration: none; border: 2px solid transparent; cursor: pointer; font-size: .95rem;
+  transition: transform .2s, box-shadow .2s, background-color .2s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0, 0, 0, .18); }
+.btn-light { background: #fff; color: var(--c-primary-dark); }
+.btn-outline { border-color: rgba(255, 255, 255, .7); color: #fff; }
+.btn-primary { background: var(--c-primary); color: #fff; }
+.btn-primary:hover { background: var(--c-primary-dark); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Nhóm Exercise ---------- */
+.group-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.group-card {
+  display: flex; flex-direction: column;
+  border-top: 6px solid var(--g, var(--c-primary));
+  transition: transform .25s, box-shadow .25s;
+}
+.group-card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(16, 38, 64, .14); }
+.group-no { font-size: .85rem; font-weight: 700; letter-spacing: .08em; color: var(--g); text-transform: uppercase; }
+.group-card h3 { margin: 4px 0 8px; font-size: 1.2rem; }
+.group-card ul { list-style: none; margin: 0 0 16px; padding: 0; flex: 1; }
+.group-card li a {
+  display: block; padding: 6px 0; color: var(--c-text); text-decoration: none;
+  border-bottom: 1px dashed var(--c-border);
+  transition: color .2s, padding-left .2s;
+}
+.group-card li a::before { content: "→ "; color: var(--g); }
+.group-card li a:hover { color: var(--g); padding-left: 6px; }
+.group-card .meta { font-size: .85rem; color: var(--c-muted); }
+.g1 { --g: var(--c-g1); }
+.g2 { --g: var(--c-g2); }
+.g3 { --g: var(--c-g3); }
+.g4 { --g: var(--c-g4); }
+.g5 { --g: var(--c-g5); }
+.group-cta { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; background: #e8f3f6; border-style: dashed; }
+.group-cta p { color: var(--c-muted); }
+
+/* ---------- Kiến thức ---------- */
+.skill-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.skill-grid .card { border-top: 6px solid var(--g, var(--c-primary)); }
+.skill-grid h3 { margin: 4px 0 8px; font-size: 1.1rem; }
+.skill-grid p { margin: 0; color: var(--c-muted); font-size: .95rem; }
+
+/* ---------- Tự đánh giá ---------- */
+.reflection { position: relative; padding-left: 64px; }
+.reflection::before {
+  content: "“"; position: absolute; left: 18px; top: -4px;
+  font: 700 84px/1 Georgia, serif; color: var(--c-accent);
+}
+
+/* ---------- Trang danh sách Lab 07 ---------- */
+.lab-hero { padding: 48px 0 40px; color: #fff; background: linear-gradient(135deg, #0b6e8a 0%, #12456b 100%); }
+.lab-hero h1 { margin: 6px 0 8px; font-size: 2rem; line-height: 1.25; }
+.lab-hero p { margin: 0; opacity: .92; max-width: 760px; }
+.breadcrumb { font-size: .9rem; opacity: .9; }
+.breadcrumb a { color: #fff; }
+.ex-group { padding: 32px 0 0; }
+.ex-group:last-of-type { padding-bottom: 64px; }
+.ex-group h2 { font-size: 1.25rem; margin: 0 0 14px; color: var(--g); }
+.ex-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.ex-item { display: flex; gap: 16px; align-items: flex-start; text-decoration: none; color: inherit; transition: transform .15s, box-shadow .15s; }
+.ex-item:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(16, 38, 64, .14); }
+.ex-badge {
+  flex: 0 0 auto; min-width: 56px; height: 56px; border-radius: 12px;
+  display: grid; place-items: center; font-weight: 700; color: #fff;
+  background: var(--g, var(--c-primary));
+}
+.ex-item h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.ex-item p { margin: 0; color: var(--c-muted); font-size: .93rem; }
+.ex-item .tag { display: inline-block; margin-top: 8px; font-size: .78rem; color: var(--c-muted); background: var(--c-bg); border-radius: 6px; padding: 2px 8px; }
+
+/* ---------- Footer ---------- */
+.site-footer { padding: 28px 0; text-align: center; color: var(--c-muted); font-size: .9rem; border-top: 1px solid var(--c-border); background: var(--c-surface); }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 900px) {
+  .group-grid, .skill-grid { grid-template-columns: 1fr 1fr; }
+  .ex-list { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .nav-toggle { display: block; }
+  .site-nav {
+    position: absolute; top: 64px; left: 0; right: 0;
+    background: var(--c-surface); border-bottom: 1px solid var(--c-border);
+    max-height: 0; overflow: hidden; transition: max-height .3s ease;
+  }
+  .nav-check:checked ~ .site-nav { max-height: 320px; }
+  .site-nav ul { flex-direction: column; padding: 8px 16px 16px; }
+  .lab-nav a { padding: 6px 8px; font-size: .9rem; }
+  .hero .container { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+  .avatar { width: 160px; height: 160px; margin: 0 auto; }
+  .profile-list { justify-items: center; }
+  .profile-list strong { min-width: 0; }
+  .btn-row, .hero-stats { justify-content: center; }
+  .hero h1 { font-size: 1.9rem; }
+  section { padding: 48px 0; }
+  .group-grid, .skill-grid { grid-template-columns: 1fr; }
+  .reflection { padding-left: 24px; padding-top: 48px; }
+}

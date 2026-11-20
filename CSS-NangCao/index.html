@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS nâng cao — Nguyễn Thị Minh Nguyệt</title>
+  <meta name="description" content="Portfolio kết quả thực hành Lab 07 – Advanced CSS: Layout của Nguyễn Thị Minh Nguyệt.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#">CSS <span>Nâng cao</span></a>
+    <input type="checkbox" id="nav-check" class="nav-check">
+    <label for="nav-check" class="nav-toggle" aria-label="Mở menu">&#9776;</label>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#profile">Thông tin</a></li>
+        <li><a href="#intro">Giới thiệu</a></li>
+        <li><a href="#exercises">Exercise</a></li>
+        <li><a href="#skills">Kiến thức</a></li>
+        <li><a href="#reflection">Tự đánh giá</a></li>
+        <li><a href="../JavaScript-Labs/">JavaScript Labs</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= 4.1 THÔNG TIN CÁ NHÂN ================= -->
+<section class="hero" id="profile">
+  <div class="container">
+    <img class="avatar" src="assets/avatar.jpg" alt="Ảnh đại diện Nguyễn Thị Minh Nguyệt">
+    <div>
+      <h1>Nguyễn Thị Minh Nguyệt</h1>
+      <p class="tagline">Phát triển ứng dụng Thương mại điện tử — Chương 5: Advanced CSS – Layout</p>
+      <ul class="profile-list">
+        <li><strong>Mã số sinh viên:</strong> 87251020135</li>
+        <li><strong>Lớp học phần:</strong> 26C1INF50902701</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/minhnguyet17" target="_blank" rel="noopener">github.com/minhnguyet17</a></li>
+      </ul>
+      <ul class="hero-stats">
+        <li><b>1</b> bài Lab</li>
+        <li><b>19</b> Exercise</li>
+        <li><b>5</b> nhóm kỹ thuật</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-light" href="#exercises">Xem các Exercise</a>
+        <a class="btn btn-outline" href="Lab07/">Danh sách Lab 07</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4.2 GIỚI THIỆU ================= -->
+<section id="intro">
+  <div class="container">
+    <h2 class="section-title">Giới thiệu</h2>
+    <p class="section-sub">Mục tiêu thực hiện Lab 07 và vai trò của CSS nâng cao trong xây dựng website</p>
+    <div class="card prose">
+      <p>
+        Lab 07 – <em>Advanced CSS: Layout</em> giúp tôi chuyển từ việc chỉ “tô màu” cho trang web sang việc thực sự
+        <b>điều khiển bố cục</b>. Mục tiêu của bài là hiểu document flow hoạt động như thế nào, biết cách đưa một phần tử
+        ra khỏi luồng bằng positioning hoặc float, xếp lớp các phần tử bằng z-index, rồi dựng các bố cục hai cột, ba cột.
+      </p>
+      <p>
+        Phần sau của bài tập trung vào trải nghiệm người dùng: media queries và viewport để một trang hiển thị tốt trên cả
+        máy tính lẫn điện thoại; transforms, transitions, filters, animations để tạo hiệu ứng tương tác; và cuối cùng là
+        Bootstrap grid để dựng giao diện nhanh. Đây đều là những kỹ thuật mà gần như mọi website thương mại điện tử hiện nay
+        đều sử dụng — từ lưới sản phẩm, nhãn giảm giá cho đến menu thu gọn trên điện thoại.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4.3 DANH SÁCH EXERCISE ================= -->
+<section id="exercises">
+  <div class="container">
+    <h2 class="section-title">Các Exercise của Lab 07</h2>
+    <p class="section-sub">19 Exercise chia thành 5 nhóm kỹ thuật — bấm vào để xem kết quả chạy trực tiếp</p>
+    <div class="group-grid">
+      <article class="card group-card g1">
+        <div class="group-no">7.1 – 7.4</div>
+        <h3>Document flow, positioning, z-index</h3>
+        <ul>
+          <li><a href="Lab07/Exercise01/">7.1 Document Flow</a></li>
+          <li><a href="Lab07/Exercise02/">7.2 Relative Positioning</a></li>
+          <li><a href="Lab07/Exercise03/">7.3 Absolute Positioning</a></li>
+          <li><a href="Lab07/Exercise04/">7.4 Stacking Using Z-Index</a></li>
+        </ul>
+        <div class="meta">display · position · z-index</div>
+      </article>
+      <article class="card group-card g2">
+        <div class="group-no">7.5 – 7.9</div>
+        <h3>Float, clear và positioning</h3>
+        <ul>
+          <li><a href="Lab07/Exercise05/">7.5 Floating Elements</a></li>
+          <li><a href="Lab07/Exercise06/">7.6 Floating in a Container</a></li>
+          <li><a href="Lab07/Exercise07/">7.7 Floating Multiple Items</a></li>
+          <li><a href="Lab07/Exercise08/">7.8 Floating and Clearing</a></li>
+          <li><a href="Lab07/Exercise09/">7.9 Using Positioning</a></li>
+        </ul>
+        <div class="meta">float · clear · clearfix</div>
+      </article>
+      <article class="card group-card g3">
+        <div class="group-no">7.10 – 7.13</div>
+        <h3>Multi-column layout, responsive, viewport</h3>
+        <ul>
+          <li><a href="Lab07/Exercise10/">7.10 Two-Column Layout</a></li>
+          <li><a href="Lab07/Exercise11/">7.11 Three-Column Layout</a></li>
+          <li><a href="Lab07/Exercise12/">7.12 Media Queries</a></li>
+          <li><a href="Lab07/Exercise13/">7.13 Setting the Viewport</a></li>
+        </ul>
+        <div class="meta">2–3 cột · media queries · viewport</div>
+      </article>
+      <article class="card group-card g4">
+        <div class="group-no">7.14 – 7.18</div>
+        <h3>Transforms, transitions, filters, animations</h3>
+        <ul>
+          <li><a href="Lab07/Exercise14/">7.14 Transforms</a></li>
+          <li><a href="Lab07/Exercise15/">7.15 Transitions</a></li>
+          <li><a href="Lab07/Exercise16/">7.16 More Transitions</a></li>
+          <li><a href="Lab07/Exercise17/">7.17 Filters</a></li>
+          <li><a href="Lab07/Exercise18/">7.18 Animations</a></li>
+        </ul>
+        <div class="meta">transform · transition · filter · @keyframes</div>
+      </article>
+      <article class="card group-card g5">
+        <div class="group-no">7.19</div>
+        <h3>Bootstrap grid system</h3>
+        <ul>
+          <li><a href="Lab07/Exercise19/">7.19 Using Bootstrap</a></li>
+        </ul>
+        <div class="meta">navbar · jumbotron · grid · panel · list-group · button</div>
+      </article>
+      <article class="card group-card group-cta">
+        <h3>Xem toàn bộ Lab 07</h3>
+        <p>Trang danh sách có mô tả ngắn và kỹ thuật chính của từng Exercise.</p>
+        <a class="btn btn-primary" href="Lab07/">Mở danh sách Lab 07 &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4.4 KIẾN THỨC & KỸ NĂNG ================= -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-title">Kiến thức &amp; kỹ năng đã học</h2>
+    <p class="section-sub">Những gì tôi tiếp thu được qua Lab 07</p>
+    <div class="skill-grid">
+      <div class="card g1">
+        <div class="group-no">Document flow</div>
+        <h3>Định vị và xếp lớp</h3>
+        <p>Phân biệt block, inline, inline-block; dùng <code>position</code> relative/absolute để đặt phần tử đúng chỗ và hiểu
+          vì sao z-index của phần tử con bị giới hạn trong stacking context của cha.</p>
+      </div>
+      <div class="card g2">
+        <div class="group-no">Float</div>
+        <h3>Float &amp; clear</h3>
+        <p>Cho chữ chảy quanh ảnh, xếp gallery nhiều ảnh, xử lý container bị co lại bằng <code>overflow: auto</code> hoặc
+          clearfix, và dùng <code>clear</code> để bắt đầu hàng mới.</p>
+      </div>
+      <div class="card g3">
+        <div class="group-no">Layout</div>
+        <h3>Bố cục nhiều cột</h3>
+        <p>Dựng layout hai cột bằng float + margin và ba cột bằng absolute positioning, đồng thời thấy được hạn chế của từng
+          cách (chiều cao cột, vị trí footer).</p>
+      </div>
+      <div class="card g3">
+        <div class="group-no">Responsive</div>
+        <h3>Media queries &amp; viewport</h3>
+        <p>Tách stylesheet desktop/mobile bằng thuộc tính <code>media</code>, khai báo viewport để điện thoại hiển thị đúng
+          chiều rộng và đổi menu danh sách thành ô chọn trên màn hình nhỏ.</p>
+      </div>
+      <div class="card g4">
+        <div class="group-no">Hiệu ứng</div>
+        <h3>Transform, transition, filter, animation</h3>
+        <p>Tạo hiệu ứng hover cho thẻ sản phẩm, banner trượt vào, nút nhấp nháy, bộ lọc ảnh… chỉ bằng CSS, không cần
+          JavaScript.</p>
+      </div>
+      <div class="card g5">
+        <div class="group-no">Bootstrap</div>
+        <h3>Bootstrap grid</h3>
+        <p>Sử dụng lưới 12 cột với các breakpoint xs/sm/md, lồng cột và tận dụng component có sẵn để dựng giao diện
+          responsive nhanh hơn nhiều so với tự viết.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4.5 TỰ ĐÁNH GIÁ ================= -->
+<section id="reflection">
+  <div class="container">
+    <h2 class="section-title">Tự đánh giá</h2>
+    <p class="section-sub">Tổng kết sau khi hoàn thành Lab 07</p>
+    <div class="card prose reflection">
+      <p>
+        Qua Lab 07, kỹ thuật quan trọng nhất tôi học được là hiểu rõ document flow, vì gần như mọi lỗi bố cục đều bắt nguồn
+        từ việc một phần tử bị đưa ra khỏi luồng. Exercise 7.4 về z-index là bài khó nhất: lúc đầu tôi không hiểu vì sao phần
+        tử con có z-index 999 vẫn bị che, cho đến khi tìm hiểu về stacking context. Exercise 7.12–7.13 lại hữu ích nhất vì
+        cho thấy cách một trang tự đổi bố cục theo màn hình. Để làm website responsive, tôi sẽ kết hợp viewport, media
+        queries và lưới Bootstrap. Với website thương mại điện tử, các kỹ thuật này áp dụng trực tiếp cho trang danh mục sản
+        phẩm nhiều cột, menu thu gọn trên điện thoại, hiệu ứng hover phóng to thẻ sản phẩm, nhãn giảm giá đặt bằng absolute
+        và banner khuyến mãi có animation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    &copy; 2026 Nguyễn Thị Minh Nguyệt · MSSV 87251020135 — CSS nâng cao (Lab 07) · Phát triển ứng dụng TMĐT
+  </div>
+</footer>
+
+</body>
+</html>
