@@ -1,0 +1,33 @@
+/* Exercise 7.19 - tuỳ chỉnh nhẹ cho giao diện Bootstrap */
+body {
+  padding-top: 50px;   /* chừa chỗ cho navbar-fixed-top */
+}
+
+.jumbotron {
+  color: #fff;
+  background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)),
+              url("../images/ninhbinh.jpg") center / cover no-repeat;
+}
+
+.jumbotron h1 {
+  font-weight: 700;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.thumbnail h3 {
+  margin-top: 4px;
+}
+
+.panel-body .row p {
+  margin-top: 4px;
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 20px 0;
+  background: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+}

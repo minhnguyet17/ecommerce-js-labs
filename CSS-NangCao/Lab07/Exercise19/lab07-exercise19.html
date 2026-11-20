@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 07 - Exercise 7.19 - Using Bootstrap</title>
+  <!-- Bootstrap 3 (thư mục bootstrap của Lab 07) -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lab07-exercise19.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+          <span class="sr-only">Mở menu</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-globe"></span> VN Travel</a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Trang chủ</a></li>
+          <li><a href="#">Điểm đến</a></li>
+          <li><a href="#">Tour</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Vùng miền <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Miền Bắc</a></li>
+              <li><a href="#">Miền Trung</a></li>
+              <li><a href="#">Miền Nam</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="../index.html"><span class="glyphicon glyphicon-arrow-left"></span> Danh sách Lab 07</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Khám phá Việt Nam</h1>
+      <p>Exercise 7.19 – Sử dụng Bootstrap grid system và các component có sẵn: navbar, jumbotron, panel, list-group, button.</p>
+      <p>
+        <a class="btn btn-primary btn-lg" href="#">Xem tour <span class="glyphicon glyphicon-chevron-right"></span></a>
+        <a class="btn btn-default btn-lg" href="#">Liên hệ</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Hàng 1: 3 cột bằng nhau -->
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="../images/halong.jpg" alt="Hạ Long">
+          <div class="caption">
+            <h3>Vịnh Hạ Long</h3>
+            <p>Du thuyền 2 ngày 1 đêm, chèo kayak, tham quan hang Sửng Sốt.</p>
+            <p><a href="#" class="btn btn-success" role="button">Đặt tour</a> <a href="#" class="btn btn-default" role="button">Chi tiết</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="../images/hoian.jpg" alt="Hội An">
+          <div class="caption">
+            <h3>Phố cổ Hội An</h3>
+            <p>Dạo phố đèn lồng, thả hoa đăng, học nấu món Quảng.</p>
+            <p><a href="#" class="btn btn-success" role="button">Đặt tour</a> <a href="#" class="btn btn-default" role="button">Chi tiết</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        <div class="thumbnail">
+          <img src="../images/phuquoc.jpg" alt="Phú Quốc">
+          <div class="caption">
+            <h3>Phú Quốc</h3>
+            <p>Resort ven biển, lặn ngắm san hô, chợ đêm Dương Đông.</p>
+            <p><a href="#" class="btn btn-success" role="button">Đặt tour</a> <a href="#" class="btn btn-default" role="button">Chi tiết</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hàng 2: cột 8 + cột 4, có nested columns -->
+    <div class="row">
+      <div class="col-md-8">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><span class="glyphicon glyphicon-star"></span> Tour nổi bật tháng này (nested columns)</h3>
+          </div>
+          <div class="panel-body">
+            <!-- lưới lồng bên trong cột col-md-8 -->
+            <div class="row">
+              <div class="col-xs-6 col-sm-3"><img src="../images/sapa.jpg" class="img-responsive img-rounded" alt=""><p class="text-center">Sa Pa</p></div>
+              <div class="col-xs-6 col-sm-3"><img src="../images/dalat.jpg" class="img-responsive img-rounded" alt=""><p class="text-center">Đà Lạt</p></div>
+              <div class="col-xs-6 col-sm-3"><img src="../images/hue.jpg" class="img-responsive img-rounded" alt=""><p class="text-center">Huế</p></div>
+              <div class="col-xs-6 col-sm-3"><img src="../images/muine.jpg" class="img-responsive img-rounded" alt=""><p class="text-center">Mũi Né</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">Các nút Bootstrap</div>
+          <div class="panel-body">
+            <button type="button" class="btn btn-default">Default</button>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-link">Link</button>
+            <div class="btn-group" role="group" style="margin-top:10px">
+              <button type="button" class="btn btn-default">Trái</button>
+              <button type="button" class="btn btn-default">Giữa</button>
+              <button type="button" class="btn btn-default">Phải</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-info">
+          <div class="panel-heading"><h3 class="panel-title">Danh mục điểm đến</h3></div>
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Tất cả điểm đến <span class="badge">8</span></a>
+            <a href="#" class="list-group-item">Miền Bắc <span class="badge">3</span></a>
+            <a href="#" class="list-group-item">Miền Trung <span class="badge">2</span></a>
+            <a href="#" class="list-group-item">Miền Nam <span class="badge">3</span></a>
+            <a href="#" class="list-group-item disabled">Quốc tế (sắp ra mắt)</a>
+          </div>
+        </div>
+
+        <div class="panel panel-warning">
+          <div class="panel-heading"><h3 class="panel-title">Đăng ký nhận ưu đãi</h3></div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email của bạn">
+              </div>
+              <button type="submit" class="btn btn-warning btn-block">Đăng ký</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">© Lab 07 – Exercise 7.19 Using Bootstrap</p>
+    </div>
+  </footer>
+
+  <script src="../bootstrap/js/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
