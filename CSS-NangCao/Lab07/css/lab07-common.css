@@ -1,0 +1,82 @@
+/* =========================================================
+   Lab 07 - CSS dùng chung cho các trang Exercise
+   Cùng theme với JavaScript-Labs (font Be Vietnam Pro, màu chủ đạo #0b6e8a,
+   thanh điều hướng nav.labbar). Chỉ định nghĩa typography và thanh điều hướng,
+   không can thiệp vào layout của từng bài.
+   ========================================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1d2733;
+  background-color: #f6f8fb;
+}
+
+/* Thanh điều hướng nhỏ ở đầu mỗi trang Exercise (giống JavaScript-Labs) */
+nav.labbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem 1rem;
+  margin: 0;
+  padding: .6rem 1rem;
+  background: #0f2a3d;
+  color: #e8f1f7;
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+nav.labbar a {
+  color: #9fd3ff;
+  text-decoration: none;
+}
+
+nav.labbar a:hover {
+  text-decoration: underline;
+}
+
+nav.labbar b {
+  font-weight: 600;
+  color: #fff;
+}
+
+nav.labbar .labbar-right {
+  margin-left: auto;
+}
+
+.lab-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px 40px;
+}
+
+.lab-content h2 {
+  font-size: 19px;
+  color: #08546a;
+  border-bottom: 2px solid #cfe6ec;
+  padding-bottom: 4px;
+  margin-top: 32px;
+}
+
+.note {
+  background: #fff8f1;
+  border-left: 4px solid #f2994a;
+  border-radius: 0 8px 8px 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+code {
+  background: #e8f3f6;
+  color: #08546a;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
