@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>Lab 07 - Exercise 7.12 - Media Queries</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/lab07-common.css">
+  <!-- CSS dùng chung cho mọi kích thước -->
+  <link rel="stylesheet" href="lab07-exercise12.css">
+  <!-- chỉ áp dụng khi màn hình rộng từ 768px trở lên -->
+  <link rel="stylesheet" href="lab07-exercise12-desktop.css" media="screen and (min-width: 768px)">
+  <!-- chỉ áp dụng khi màn hình hẹp hơn 768px -->
+  <link rel="stylesheet" href="lab07-exercise12-mobile.css" media="screen and (max-width: 767px)">
+</head>
+<body>
+  <nav class="labbar">
+    <a href="../index.html">&larr; Lab 07</a>
+    <b>Exercise 7.12 — Media Queries</b>
+    <a class="labbar-right" href="../../index.html">Trang chủ</a>
+  </nav>
+
+  <header class="site-header">
+    <h2 class="logo">VN<span>Travel</span></h2>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Điểm đến</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Khám phá Việt Nam</h2>
+    <p class="screen-info"></p>
+  </section>
+
+  <section class="cards">
+    <article class="card">
+      <img src="../images/halong.jpg" alt="Hạ Long">
+      <h3>Vịnh Hạ Long</h3>
+      <p>Du thuyền ngủ đêm trên vịnh, chèo kayak qua hang Luồn.</p>
+    </article>
+    <article class="card">
+      <img src="../images/hoian.jpg" alt="Hội An">
+      <h3>Phố cổ Hội An</h3>
+      <p>Thả đèn hoa đăng trên sông Hoài, thưởng thức cao lầu.</p>
+    </article>
+    <article class="card">
+      <img src="../images/phuquoc.jpg" alt="Phú Quốc">
+      <h3>Phú Quốc</h3>
+      <p>Lặn ngắm san hô ở quần đảo An Thới, ngắm hoàng hôn Dinh Cậu.</p>
+    </article>
+  </section>
+
+  <footer class="site-footer">© Lab 07 – Media Queries</footer>
+</body>
+</html>

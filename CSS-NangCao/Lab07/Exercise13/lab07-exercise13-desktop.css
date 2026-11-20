@@ -1,0 +1,47 @@
+/* Exercise 7.13 - Desktop (min-width: 768px) */
+.logo {
+  float: left;
+}
+
+.menu {
+  float: right;
+  margin-top: 8px;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 24px;
+}
+
+.hero {
+  padding: 110px 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
+}
+
+.screen-info::after {
+  content: "Đang dùng: lab07-exercise13-desktop.css";
+  background: #22c55e;
+  color: #fff;
+}
+
+/* 3 thẻ nằm ngang bằng float */
+.cards {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 12px;
+  overflow: auto;
+}
+
+.card {
+  float: left;
+  width: 31.33%;
+  margin: 0 1%;
+}
+
+/* 7.13: desktop hiển thị menu danh sách, ẩn select */
+.menu-select {
+  display: none;
+}
